@@ -72,6 +72,7 @@ dependencies {
     implementation("com.google.android.flexbox:flexbox:3.0.0")
     implementation("com.paypal.android:paypal-web-payments:1.5.0")
     implementation("com.google.android.gms:play-services-maps:18.0.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("jakarta.validation:jakarta.validation-api:2.0.2")
     implementation("org.hibernate.validator:hibernate-validator:6.2.0.Final")

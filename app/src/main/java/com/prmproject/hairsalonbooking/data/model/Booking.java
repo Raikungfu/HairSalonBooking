@@ -2,7 +2,9 @@ package com.prmproject.hairsalonbooking.data.model;
 
 import com.prmproject.hairsalonbooking.data.model.type.BookingStatus;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Booking {
@@ -23,7 +25,8 @@ public class Booking {
     private Schedule schedule;
     private User staff;
     private Voucher voucher;
-    private Set<BookingDetail> bookingDetails = new HashSet<>();
+    private boolean isExpanded = false;
+    private List<BookingDetail> bookingDetails = new ArrayList<>();
     private Set<Payment> payments = new HashSet<>();
     private Set<Report> reports = new HashSet<>();
 
@@ -41,6 +44,14 @@ public class Booking {
 
     public void setTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public boolean isExpanded() {
+        return isExpanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
     }
 
     public Integer getVoucherId() {
@@ -167,11 +178,11 @@ public class Booking {
         this.voucher = voucher;
     }
 
-    public Set<BookingDetail> getBookingDetails() {
+    public List<BookingDetail> getBookingDetails() {
         return bookingDetails;
     }
 
-    public void setBookingDetails(Set<BookingDetail> bookingDetails) {
+    public void setBookingDetails(List<BookingDetail> bookingDetails) {
         this.bookingDetails = bookingDetails;
     }
 

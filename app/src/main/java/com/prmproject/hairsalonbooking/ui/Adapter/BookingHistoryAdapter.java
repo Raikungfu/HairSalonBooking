@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.prmproject.hairsalonbooking.R;
-import com.prmproject.hairsalonbooking.data.model.Booking;
 import com.prmproject.hairsalonbooking.data.model.dataToSend.RequestDTO;
 
 import java.util.List;

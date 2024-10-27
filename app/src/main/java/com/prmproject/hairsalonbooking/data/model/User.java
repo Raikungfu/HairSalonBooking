@@ -83,15 +83,15 @@ public class User {
     }
 
     public UserRole getRole() {
-        return status != null ? UserRole.values()[status] : null;
+        return role != null ? UserRole.values()[role] : null;
     }
 
     public Integer getRoleInt() {
-        return status;
+        return role;
     }
 
-    public void setRole(Integer status) {
-        this.status = status;
+    public void setRole(Integer role) {
+        this.role = role;
     }
 
     public String getCreateDate() {

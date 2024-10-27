@@ -96,7 +96,7 @@ public class ProfileFragment extends Fragment {
                 binding.tvUserRole.setBackgroundColor(getResources().getColor(R.color.colorStylist));
                 stylistView.setVisibility(View.VISIBLE);
                 binding.checkBookingBtn.setOnClickListener(v -> {
-                    navController.navigate(R.id.manage_status_booking_Btn);
+                    navController.navigate(R.id.navigation_check_in_out_booking);
                 });
                 break;
 

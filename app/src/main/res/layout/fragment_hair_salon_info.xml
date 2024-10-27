@@ -1,0 +1,172 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/shopInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:elevation="8dp"
+            android:backgroundTint="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/shopName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Glamour Hair Studio"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/shopAddressLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Địa chỉ:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/shopAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đường ABC, Quận XYZ"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/shopPhoneLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số điện thoại:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/shopPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0123456789"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/shopHoursLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian mở cửa:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="start" />
+
+                <TextView
+                    android:id="@+id/shopHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thứ Hai - Chủ Nhật: 9:00 - 20:00"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:textColor="#444444"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/shopDescriptionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mô Tả:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="start" />
+
+                <TextView
+                    android:id="@+id/shopDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shop description"
+                    android:textSize="15sp"
+                    android:textColor="#444444"
+                    android:background="#FAFAFA"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/shopIntroLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới Thiệu:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="start" />
+
+                <TextView
+                    android:id="@+id/shopIntro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shop intro"
+                    android:textSize="15sp"
+                    android:textColor="#444444"
+                    android:background="#FAFAFA"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/shopInfoContainer"
+            android:layout_margin="16dp"
+            android:background="#E0E0E0"
+            android:clipToOutline="true"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnNavigate"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/map"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/img_rect_button_primary_big_inactive"
+            android:text="Chỉ Đường"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,7 +1,6 @@
 package com.prmproject.hairsalonbooking.ui.booking;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +13,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.prmproject.hairsalonbooking.R;
 import com.prmproject.hairsalonbooking.data.model.Booking;
 import com.prmproject.hairsalonbooking.data.model.dataToSend.RequestDTO;
-import com.prmproject.hairsalonbooking.data.model.type.BookingStatus;
-import com.prmproject.hairsalonbooking.ui.Adapter.BookingAdapter;
-import com.prmproject.hairsalonbooking.ui.Adapter.BookingHistoryAdapter;
 import com.prmproject.hairsalonbooking.ui.Adapter.ManageBookingAdapter;
 
 import java.util.ArrayList;

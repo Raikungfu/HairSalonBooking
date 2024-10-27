@@ -33,4 +33,6 @@
             <string name="save">SAVE</string>
         <string name="title_manage_user">Manage User</string>
             <string name="title_manage_service">Manage Service</string>
+        <string name="about">About</string>
+        <string name="check_in_out_booking">Check Booking</string>
     </resources>

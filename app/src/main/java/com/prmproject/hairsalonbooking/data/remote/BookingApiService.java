@@ -28,4 +28,7 @@ public interface BookingApiService {
 
     @GET("api/v1/booking")
     Call<List<Booking>> getAllBookings(@Query("page") int page, @Query("pageSize") int pageSize);
+
+    @GET("api/v1/booking/current-stylist")
+    Call<List<Booking>> getAllBookingsForStylist();
 }

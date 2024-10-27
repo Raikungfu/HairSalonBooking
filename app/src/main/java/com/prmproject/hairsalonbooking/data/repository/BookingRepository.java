@@ -89,6 +89,22 @@ public class BookingRepository {
         return responseListLiveData;
     }
 
+    public LiveData<ListResponse> getBookingsForStylist() {
+        MutableLiveData<ListResponse> responseListLiveData = new MutableLiveData<>();
+
+        apiService.getAllBookingsForStylist().enqueue(new Callback<List<Booking>>() {
+            @Override
+            public void onResponse(Call<List<Booking>> call, Response<List<Booking>> response) {
+                responseListLiveData.postValue(new ListResponse<>(response.body(), "Lấy danh sách booking thành công", true));            }
+            @Override
+            public void onFailure(Call<List<Booking>> call, Throwable t) {
+                responseListLiveData.setValue(new ListResponse<>(null, t.getMessage(), false));
+            }
+        });
+
+        return responseListLiveData;
+    }
+
     public LiveData<ObjectResponse> changeBookingStatus(int id, RequestDTO.ChangeBookingStatusDTO model) {
         MutableLiveData<ObjectResponse> responseLiveData = new MutableLiveData<>();
 

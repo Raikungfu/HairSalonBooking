@@ -10,10 +10,13 @@ public class BookingDetail {
     private String createBy;
     private String updateDate;
     private String updateBy;
-
     private Booking booking;
     private HairService service;
     private User stylist;
+
+
+    private String serviceName;
+    private String stylistName;
 
     public int getBookingDetailId() {
         return bookingDetailId;
@@ -101,5 +104,21 @@ public class BookingDetail {
 
     public void setStylist(User stylist) {
         this.stylist = stylist;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+    public String getStylistName() {
+        return stylistName;
+    }
+
+    public void setStylistName(String stylistName) {
+        this.stylistName = stylistName;
     }
 }

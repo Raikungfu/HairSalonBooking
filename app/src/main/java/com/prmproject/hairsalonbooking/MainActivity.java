@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home,
                 R.id.navigation_cart,
+                R.id.navigation_notifications,
                 R.id.navigation_profile)
                 .build();
 

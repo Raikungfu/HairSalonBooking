@@ -24,6 +24,12 @@
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
+        android:id="@+id/navigation_hair_salon_info"
+        android:name="com.prmproject.hairsalonbooking.ui.info.HairSalonInfoFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_hair_salon_info" />
+
+    <fragment
         android:id="@+id/navigation_cart"
         android:name="com.prmproject.hairsalonbooking.ui.cart.CartFragment"
         android:label="@string/title_cart"
@@ -40,6 +46,12 @@
         android:name="com.prmproject.hairsalonbooking.ui.user.ManageUserFragment"
         android:label="@string/title_manage_user"
         tools:layout="@layout/fragment_manage_user" />
+
+    <fragment
+        android:id="@+id/navigation_check_in_out_booking"
+        android:name="com.prmproject.hairsalonbooking.ui.CheckInOutBooking.CheckInOutBookingFragment"
+        android:label="@string/check_in_out_booking"
+        tools:layout="@layout/fragment_check_in_out_booking" />
 
     <fragment
         android:id="@+id/navigation_manage_hair_service"

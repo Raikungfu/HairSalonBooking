@@ -1,0 +1,24 @@
+<resources>
+    <color name="colorPrimary">#FF6A00</color>
+    <color name="colorPrimaryPress">#FF5500</color>
+    <color name="colorPrimaryVariant">#E64A19</color>
+    <color name="colorSecondary">#D3D3D3</color>
+    <color name="colorSecondaryVariant">#FF9747</color>
+    <color name="colorSecondaryVariantPress">#FD720F</color>
+
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="gray">#808080</color>
+    <color name="yellow">#FFDC00</color>
+    <color name="purple_700">#673AB7</color>
+    <color name="colorCustomer">#FFEB3B</color>
+    <color name="colorStylist">#8BC34A</color>
+    <color name="colorStaff">#2196F3</color>
+    <color name="colorManager">#FF9800</color>
+    <color name="colorAdmin">#F44336</color>
+    <color name="colorDefault">#B0BEC5</color>
+</resources>

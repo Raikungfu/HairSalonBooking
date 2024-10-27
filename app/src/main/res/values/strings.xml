@@ -1,0 +1,36 @@
+    <resources>
+        <string name="app_name">Hair Salon Booking</string>
+        <string name="title_home">Home</string>
+        <string name="title_dashboard">Dashboard</string>
+            <string name="title_notifications">Notifications</string>
+        <string name="title_payment">Payment</string>
+        <string name="title_bag">Bag</string>
+        <string name="title_chat">Chat</string>
+        <string name="title_message">Message</string>
+        <string name="title_profile">Profile</string>
+        <string name="enter_your_email">Enter your email...</string>
+        <string name="enter_your_username">Enter your username...</string>
+        <string name="todo">TODO</string>
+        <string name="enter_your_password">Enter your password...</string>
+        <string name="register">REGISTER</string>
+        <string name="login">LOGIN</string>
+        <string name="or_sign_up_with_social_account">Or sign up with social account</string>
+        <string name="image_description">Image Description</string>
+        <string name="already_have_an_account">Already have an account?</string>
+        <string name="enter_your_phone">Enter your phone number...</string>
+        <string name="dont_have_an_account">Don’t have an account? </string>
+        <string name="forgot_password_reset">Forgot password? </string>
+        <string name="forgot_password">FORGOT PASSWORD</string>
+        <string name="send"></string>
+        <string name="hello_blank_fragment">Hello blank fragment</string>
+        <string name="title_my_booking">My Booking</string>
+        <string name="title_setting">Settings</string>
+        <string name="title_address">Ship Address</string>
+        <string name="title_add_address">Add Address</string>
+            <string name="title_cart">Cart</string>
+            <string name="title_booking_history">History</string>
+            <string name="title_manage_booking">Manage Booking</string>
+            <string name="save">SAVE</string>
+        <string name="title_manage_user">Manage User</string>
+            <string name="title_manage_service">Manage Service</string>
+    </resources>

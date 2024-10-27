@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.prmproject.hairsalonbooking.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.prmproject.hairsalonbooking.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.prmproject.hairsalonbooking.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.prmproject.hairsalonbooking.ui.cart.CartFragment"
+        android:label="@string/title_cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/navigation_booking_history"
+        android:name="com.prmproject.hairsalonbooking.ui.booking.BookingHistoryFragment"
+        android:label="@string/title_booking_history"
+        tools:layout="@layout/fragment_booking_history" />
+
+    <fragment
+        android:id="@+id/navigation_manage_user"
+        android:name="com.prmproject.hairsalonbooking.ui.user.ManageUserFragment"
+        android:label="@string/title_manage_user"
+        tools:layout="@layout/fragment_manage_user" />
+
+    <fragment
+        android:id="@+id/navigation_manage_hair_service"
+        android:name="com.prmproject.hairsalonbooking.ui.service.HairServiceFragment"
+        android:label="@string/title_manage_service"
+        tools:layout="@layout/fragment_hair_service" />
+
+    <fragment
+        android:id="@+id/navigation_manage_booking"
+        android:name="com.prmproject.hairsalonbooking.ui.booking.ManageBookingFragment"
+        android:label="@string/title_manage_booking"
+        tools:layout="@layout/fragment_manage_booking" />
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.prmproject.hairsalonbooking.ui.Auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_register"
+            app:destination="@id/navigation_register" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.prmproject.hairsalonbooking.ui.Auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_login_required"
+        android:name="com.prmproject.hairsalonbooking.ui.Auth.LoginRequiredFragment"
+        android:label="Login Required"
+        tools:layout="@layout/fragment_login_required">
+        <action
+            android:id="@+id/action_navigation_login_required_to_navigation_register"
+            app:destination="@id/navigation_register" />
+        <action
+            android:id="@+id/action_navigation_login_required_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.prmproject.hairsalonbooking.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_shop"
+            app:destination="@+id/navigation_booking_history" />
+        <action
+            android:id="@+id/action_navigation_myprofile_to_navigation_address"
+            app:destination="@+id/navigation_my_address" />
+        <action
+            android:id="@+id/action_navigation_myprofile_to_navigation_setting"
+            app:destination="@+id/navigation_setting" />
+        <action
+            android:id="@+id/action_navigation_myprofile_to_navigation_information_of_account"
+            app:destination="@+id/navigation_information" />
+    </fragment>
+
+</navigation>

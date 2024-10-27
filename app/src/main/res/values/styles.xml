@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style>
+    <style name="cr5">
+        <item name="cornerSize">5dp</item>
+    </style>
+</resources>

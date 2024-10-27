@@ -1,0 +1,8 @@
+<!-- res/values/arrays.xml -->
+<resources>
+    <string-array name="payment_methods">
+        <item>Thanh toán khi nhận hàng</item>
+        <item>Thẻ ATM nội địa</item>
+        <item>Thẻ quốc tế</item>
+    </string-array>
+</resources>

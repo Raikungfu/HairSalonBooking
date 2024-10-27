@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <!-- Service Image -->
+        <ImageView
+            android:id="@+id/serviceImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Service Name -->
+        <TextView
+            android:id="@+id/serviceName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/textPrimary"
+            android:textStyle="bold"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@id/serviceImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Service Price Label -->
+        <TextView
+            android:id="@+id/servicePriceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+            app:layout_constraintTop_toBottomOf="@id/serviceName"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Service Price -->
+        <TextView
+            android:id="@+id/servicePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            app:layout_constraintTop_toBottomOf="@id/serviceName"
+            app:layout_constraintStart_toEndOf="@id/servicePriceLabel"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Service Estimate Time Label -->
+        <TextView
+            android:id="@+id/serviceEstimateTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimated Time:"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+            app:layout_constraintTop_toBottomOf="@id/servicePrice"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Service Estimate Time -->
+        <TextView
+            android:id="@+id/serviceEstimateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textPrimary"
+            app:layout_constraintTop_toBottomOf="@id/servicePrice"
+            app:layout_constraintStart_toEndOf="@id/serviceEstimateTimeLabel"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Service Description Label -->
+        <TextView
+            android:id="@+id/serviceDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+            app:layout_constraintTop_toBottomOf="@id/serviceEstimateTime"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Service Description -->
+        <TextView
+            android:id="@+id/serviceDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/textPrimary"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@id/serviceEstimateTime"
+            app:layout_constraintStart_toEndOf="@id/serviceDescriptionLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

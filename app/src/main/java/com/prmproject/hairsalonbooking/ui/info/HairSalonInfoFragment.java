@@ -76,7 +76,7 @@ public class HairSalonInfoFragment extends Fragment implements OnMapReadyCallbac
         }
 
         mMap.addMarker(new MarkerOptions().position(shopLocation).title(shopName).snippet(shopAddress));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(shopLocation, 18));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(shopLocation, 15));
     }
 
 

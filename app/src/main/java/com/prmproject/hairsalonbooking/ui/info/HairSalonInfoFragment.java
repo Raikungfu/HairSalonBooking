@@ -28,9 +28,9 @@ import android.widget.Toast;
 public class HairSalonInfoFragment extends Fragment implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private LatLng shopLocation = new LatLng(13.769304462426435, 109.23007734155416);
+    private LatLng shopLocation = new LatLng(13.80406150896097, 109.21917758190577);
     private String shopName = "Glamour Hair Studio";
-    private String shopAddress = "999 Nguyễn Huệ, Quy Nhon, Viet Nam";
+    private String shopAddress = "R639+HM2, Khu đô thị mới, Quy Nhơn, Bình Định 55117, Vietnam";
     private String shopPhone = "0123456789";
     private String shopDescription = "Glamour Hair Studio là một salon tóc hiện đại và sang trọng, mang đến trải nghiệm chăm sóc tóc tuyệt vời cho mọi khách hàng. Với đội ngũ chuyên viên tóc dày dạn kinh nghiệm và nhiệt tình, chúng tôi tự hào mang đến những dịch vụ cắt tóc, tạo kiểu, nhuộm, và chăm sóc tóc chất lượng cao.";
     private String shopServices = "Tại Glamour Hair Studio, chúng tôi không chỉ là một salon tóc, mà còn là một không gian thư giãn và chăm sóc bản thân. Khi bạn bước vào, bạn sẽ được chào đón bởi một không khí ấm áp và thân thiện, cùng với sự tận tâm của đội ngũ nhân viên.";

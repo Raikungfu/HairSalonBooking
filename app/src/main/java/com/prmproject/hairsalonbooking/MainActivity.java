@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private NavController navController;
     private AppBarConfiguration appBarConfiguration;
+    private static final int PAYMENT_REQUEST_CODE = 222;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +64,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-
-        if (intent.getData().getHost().equals("payment-return")) {
-            navController.navigate(R.id.navigation_home);
-            Toast.makeText(this, "Thanh toán thành công!", Toast.LENGTH_SHORT).show();
-            Log.d("Payment", "Payment success: " + intent.getData().toString());
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PAYMENT_REQUEST_CODE && resultCode == RESULT_OK) {
+            if (data != null) {
+                String paymentStatus = data.getStringExtra("payment_status");
+                if ("success".equals(paymentStatus)) {
+                    showPaymentSuccessDialog();
+                } else {
+                    showPaymentFailureDialog();
+                }
+            }
         }
     }
+
+    private void showPaymentSuccessDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Thanh toán thành công")
+                .setMessage("Cảm ơn bạn đã thanh toán. Đơn hàng của bạn đã được xác nhận.")
+                .setPositiveButton("OK", null)
+                .show();
+    }
+
+    private void showPaymentFailureDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Thanh toán thất bại")
+                .setMessage("Có lỗi xảy ra trong quá trình thanh toán. Vui lòng thử lại.")
+                .setPositiveButton("OK", null)
+                .show();
+    }
+
 }

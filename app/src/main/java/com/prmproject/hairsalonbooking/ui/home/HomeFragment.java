@@ -29,6 +29,7 @@ import com.prmproject.hairsalonbooking.databinding.FragmentHomeBinding;
 import com.prmproject.hairsalonbooking.ui.Adapter.HairServiceAdapter;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -54,9 +55,16 @@ public class HomeFragment extends Fragment {
         homeViewModel.getListHairService().observe(getViewLifecycleOwner(), hairServiceListResponse -> {
             if (hairServiceListResponse != null && hairServiceListResponse.isSuccess()) {
                 hairServiceList = hairServiceListResponse.getData();
+                List<HairService> filteredHairServiceList = new ArrayList<>();
                 for (HairService hair: hairServiceList) {
-                    if(bookingMap.containsKey(hair.getServiceId())) hair.setSelected(true);
+                    if (hair.getStatus() == 1) {
+                        if (bookingMap.containsKey(hair.getServiceId())) {
+                            hair.setSelected(true);
+                        }
+                        filteredHairServiceList.add(hair);
+                    }
                 }
+                hairServiceList = filteredHairServiceList;
                 hairServiceAdapter = new HairServiceAdapter(hairServiceList, this::onHairServiceSelected);
                 hairServiceRecyclerView.setLayoutManager(new LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false));
                 hairServiceRecyclerView.setAdapter(hairServiceAdapter);

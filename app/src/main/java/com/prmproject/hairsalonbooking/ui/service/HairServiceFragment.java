@@ -68,15 +68,17 @@ public class HairServiceFragment extends Fragment {
         showServiceFormDialog(service);
     }
 
-    private void onDeleteService(int serviceId) {
-        hairServiceViewModel.deleteHairService(serviceId, new RequestDTO.RemoveServiceDTO(2)).observe(getViewLifecycleOwner(), hairServiceResponse -> {
-            if (hairServiceResponse != null && hairServiceResponse.isSuccess()) {
+    private void onDeleteService(HairService service) {
+        hairServiceViewModel.deleteHairService(service.getServiceId(), new RequestDTO.RemoveServiceDTO(2)).observe(getViewLifecycleOwner(), hairServiceResponse -> {
+            if (hairServiceResponse != null && hairServiceResponse.getStatus() == 1) {
                 Toast.makeText(requireContext(), "Service deleted", Toast.LENGTH_SHORT).show();
+                service.setStatus(2);
+                adapter.notifyDataSetChanged();
             } else {
                 Toast.makeText(requireContext(), "Failed to delete service", Toast.LENGTH_SHORT).show();
             }
         });
-        Toast.makeText(requireContext(), "Service deleted: " + serviceId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(requireContext(), "Service deleted: " + service.getServiceId(), Toast.LENGTH_SHORT).show();
         loadServices();
     }
 

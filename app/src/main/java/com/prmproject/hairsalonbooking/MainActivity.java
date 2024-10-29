@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             if (data != null) {
                 String paymentStatus = data.getStringExtra("payment_status");
                 if ("success".equals(paymentStatus)) {
+
                     showPaymentSuccessDialog();
                 } else {
                     showPaymentFailureDialog();
